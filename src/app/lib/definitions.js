@@ -1,4 +1,4 @@
-import {z} from '@';
+import {z} from 'zod';
 
 export default SignupFormSchema = z.object({
     name: z
