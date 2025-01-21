@@ -1,0 +1,164 @@
+{
+    "en":{
+        "Pens":{
+            "Pencils":[
+                {"name":"Doms","content":["Karbon","Fusion","YID"]},
+                {"name":"Zero","content":["801"]},
+                {"name":"Chiness Pencils","content":["With Shapes"]}
+            ],
+            "Pens":
+            [
+                {
+                    "name":"Claro","contet":["Technic","Ultima","Chroma"]
+                },
+                {
+                    "name":"Zero","contet":["101"]
+                },
+                {
+                    "name":"Hauser","contet":["XO"]
+                },{
+                    "name":"Multi Colored","contet":["6 colors","4 colors short"]
+                },{
+                    "name":"Chiness Pens","contet":["Pens with Shapes"]
+                }
+            ]
+        },
+        "NoteBooks":[
+            {
+                "name":"MOB","content":["70","140","180"]
+            },
+            {
+                "name":"Al-Amany","content":["70","140","pocket"]
+            },
+            {
+                "name":"Al-Adib","content":["70"]
+            },
+            {
+                "name":"Parts","content":["2 Prt","3 Part","5 Part"]
+            },
+            {
+                "name":"Music Books","content":["Large","Small"]
+            }
+        ],
+        "Colours":{
+            "Wooden":[
+                {
+                    "name":"Zero",
+                    "content":["24Tall","24/12 Tall","12 Short","12/6 Shor"]
+                },
+                {
+                    "name":"Hauser","content":["12 Tall"]
+                },
+                {
+                    "name":"C3","content":["12 tall","12 medium","12 Small"]
+                }
+            ],
+            "WaterColour":[
+                {"name":"Doms","content":["24"]},
+                {"name":"Other","content":["24"]}
+            ],
+            "Palette":["12 big","8 Small"]
+        },
+        "WhiteBoards":[
+            {"name":"Erasers" ,"content":[ "Mat","Doodly"]},
+            {"name":"Markers" ,"content":["MOB","Zero"]},
+            {"name":"Refill"  ,"content":["MOB","Zero"]}
+        ],
+        "Highlighters":[
+            {"name":"Tender","content":["Pink","Phosphore","Blue"]},
+            {"name":"Zero",  "content":["Two Colors Highlighter"]}
+        ],
+        "StickNotes":[
+            ["Small","medium","Shapes"]
+        ],
+        "Rulers":[
+            "10 cm","30 cm","10 cm steel","30 cm steel"
+        ]
+    },
+    "ar":{
+        "Pens":{
+            "Pencils":[
+                {"name":"دومز","content":["Karbon","Fusion","YID"]},
+                {"name":"زيرو","content":["801"]},
+                {"name":"قلم رصاص صيني","content":["With Shapes"]}
+            ],
+            "Pens":
+            [
+                {
+                    "name":"كلارو","contet":["تكنك","التيما","كروما","جيل"]
+                },
+                {
+                    "name":"زيرو","contet":["101"]
+                },
+                {
+                    "name":"هاوسر","contet":["XO"]
+                },{
+                    "name":"قلم متعدد","contet":["6 الوان","4 الوان"]
+                },{
+                    "name":"اقلام صينية","contet":["اقلام مع اشكال"]
+                }
+            ]
+        },"NoteBooks":{
+            "Medium":[{
+                "name":"موب","content":["صفحة 70","صفحة 140"," صفحة 180"]
+                },
+                {
+                    "name":"الأماني","content":["صفحة 70","صفحة 140"]
+                },
+                {
+                    "name":"الأديب","content":["صفحة 70"]
+                }
+            ],
+            "College":[{
+                "name":"موب","content":["صفحة 70","صفحة 140"]
+                },
+                {
+                    "name":"الأماني","content":["صفحة 70","صفحة 140"]
+                },
+                {
+                    "name":"الأديب","content":["صفحة 70"]
+                },
+                {
+                    "name":"أقسام","content":["قسمين","3 اقسام","5 اقسام"]
+                }
+            ],
+            "MusicBook":{
+                "name":"دفاتر موسيقا","content":["كبير","وسط"]
+            }
+        },
+        "Colours":{
+            "Wooden":[
+                {
+                    "name":"زيرو",
+                    "content":["24 لون طويل","24 لون طويل12 قلم","12 لون قصير","12 لون 6 قلم "]
+                },
+                {
+                    "name":"هاوسر","content":["12 لون طويل"]
+                },
+                {
+                    "name":"C3","content":["12 لون طويل","12 لون وسط","12 لون قصير"]
+                }
+            ],
+            "WaterColour":[
+                {"name":"دومز","content":["24 عصارة"]},
+                {"name":"نوع اخر","content":["24 عصارة"]}
+            ],
+            "Palette":["12 لون حجم كبير","8 لون حجم صغير"]
+        },
+        "WhiteBoards":[
+            {"name":"محايات" ,"content":[ "Mat","Doodly","زيرو"]},
+            {"name":"قلم لوح" ,"content":["موب","زيرو"]},
+            {"name":"خراطيش"  ,"content":["موب","زيرو"]}
+        ],
+        "Highlighters":[
+            {"name":"تندر","content":["Pink","Phosphore","Blue"]},
+            {"name":"زيرو",  "content":["Two Colors Highlighter"]}
+        ],
+        "StickNotes":[
+            ["صغير","وسط مربعات"," اشكال","اشكال مربعات"]
+        ],
+        "Rulers":[
+            "10 سم","30 سم","10 سم معدن","30 سم معدن"
+        ]
+    }
+}

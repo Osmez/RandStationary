@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { NavLinks } from '@/app/ui/nav-links';
+import RandFooter from '@/app/ui/footer';
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Rand Stationary",
+  description: "Created By Osama Namur",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <NavLinks/>
+        {children}
+        <RandFooter />
+      </body> 
+    </html>
+  );
+}
