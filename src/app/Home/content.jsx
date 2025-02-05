@@ -1,17 +1,17 @@
 "use client"
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import itms from './content.json';
-import {motion} from 'framer-motion';
 import Card from './card';
 import ContentHeader from './ContentHeader';
+import SectionHeader from './sectionHeader';
+import SectionHeaderAR from './sectionheaderar'
 import { LanguageContext } from '../Context/LanguageContext';
 
 
 export default function Content(){
    
    const lang = useContext(LanguageContext);
-   
-
+   const the_items = itms[lang];
    
    
    return (
@@ -22,101 +22,86 @@ export default function Content(){
          <section className="w-full px-8 py-4 flex flex-wrap justify-center align-top" dir={`${ lang == 'en'? 'ltl':'rtl'}`}>
       
                
-         <div className='w-4/5 min-h-10 h-fit bg-slate-200 p-2 border rounded-md shadow-xl flex flex-col' >
-            <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'اقلام رصاص وحبر':'Pen and pencils'}</h2> </div>
+         <div className='w-4/5 min-h-10 h-fit p-2 border rounded-md shadow-xl flex flex-col' >
+            { lang == 'en'? <SectionHeader text={'Pens and Pencils'}/>:<SectionHeaderAR text={'أقلام'}/>}
+         
             {
-               itms[lang].Pens.Pens.map(
-                  (items,id)=>{
+               the_items.Pens.Pens.map(
+                  (items)=>{
                      return(
-                     <div key={id}>
-                        <div className='w-full h-fit p-2'><h2>{itms[lang].name}</h2> </div>
+                     <>
+                        <div className='w-full h-fit p-2'><h2>{items.name}</h2> </div>
                         <div  className='w-full h-fit flex flex-row flex-wrap'>
-                           {items.contet.map((content_item,uk)=>{ 
+                           {items.contet.map((_item,id)=>{ 
                               return(
-                           <div key={uk} className='w-1/4  min-h-10 m-2 p-2 bg-slate-300 flex flex-wrap flex-col'>
-                              <div className='w-full h-32 bg-slate-400'></div>
-                              <p>{content_item}</p>
-                           </div>
+                                 
+                                    <Card key={id} item={_item} />
+                                 
                               )
                            })}
                         </div>
-                     </div>
+                     </>
                      )
                   }
                )
             }
             <hr></hr>{
-            itms[lang].Pens.Pencils.map(
-                  (items, id)=>{
+            the_items.Pens.Pencils.map(
+                  (items)=>{
                      return(
-                     <div key={id}>
+                     <>
                         <div className='w-full h-fit p-2'><h2>{items.name}</h2> </div>
                         <div  className='w-full h-fit flex flex-row'>
-                           {items.content.map((content_item,pk)=>{ 
+                           {items.content.map((_item,id)=>{ 
                               return(
-                           <div key={pk} className='w-1/4  min-h-10 m-2 p-2 bg-slate-300 flex flex-col'>
-                              <div className='w-full h-32 bg-slate-400'></div>
-                              <p>{content_item}</p>
-                           </div>
+                                 <Card item={_item} key={id} />
                               )
                            })}
                         </div>
-                     </div>
+                     </>
                      )
                   }
                )
             }
          </div>
-         <div className='w-4/5 min-h-10 h-fit bg-red-300 p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+         <div className='w-4/5 min-h-10 h-fit  p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+            
+            { lang == 'en'? <SectionHeader text={'Notebooks'}/>:<SectionHeaderAR text={'دفاتر'}/>}
             <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'دفاتر':'Notebooks'}</h2></div>
             
                {
-                  itms[lang].NoteBooks.map((the_item, id)=>{
+                  the_items.NoteBooks.map((the_item)=>{
                      return(
-                        <div key={id}>
+                        <>
                            <div className='w-full h-fit p-2'><h2></h2>{the_item.name}</div>
                            <div className='w-full h-fit flex flex-row '>
-                                 {the_item.content.map((note_item,id)=>{
+                                 {the_item.content.map((_item,id)=>{
                                     return(
-                                       <div key={id} className='w-1/4  min-h-10 m-2 p-2 bg-red-400 flex flex-col'>
-                                       <div className='w-full h-32 bg-red-400'></div>
-                                       <p>{note_item}</p>
-                                    </div>
+                                       <Card key={id} item={_item} />
                                     )
                                  })}
                            </div>
-                        </div>
+                        </>
                      )
                   })
                }
             
          </div> 
 
-         <div className='w-4/5 min-h-10 h-fit bg-green-300 p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-            <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'ألوان خشبية':'Pencil Colors'}</h2> </div>
-            <motion.h3 
-               variants={{hide:{transform:'scaleY(0)',left:'200px',transformOrigin:'top'},vis:{transform:['scaleY(0)','scaleY(1)','scale(1)'],left:['200px','200px','0']}}}
-               
-               className=' inline-block text-[8vw] relative'
-               initial="hide"
-               whileInView="vis"
-               
-               transition={{duration:2,delay:0.2,times:[0,0.6,1]}}
-            >
-            COLOURS
-            </motion.h3>
+         <div className='w-4/5 min-h-10 h-fit  p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+         { lang == 'en'? <SectionHeader text={'Colours'}/>:<SectionHeaderAR text={'ألوان'}/>}
             <div className='w-full h-fit flex flex-row flex-wrap'>
             
                {
-                  itms[lang].Colours.Wooden.map((color_item, id)=>{
+                  the_items.Colours.Wooden.map((color_item)=>{
                         return(
-                           <div key="id">
+                           <>
                               <ContentHeader text={color_item.name} />
                               <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                              {color_item.content.map((color_item_content, id)=>{
-                                 return(<Card key={id} name={color_item_content} />)
+                              {color_item.content.map((_item, id)=>{
+                                 return(<Card key={id} item={_item} />)
                               })}
-                           </div>
+                           </>
                         )
                      }
                   )
@@ -124,15 +109,9 @@ export default function Content(){
                <hr/>
                <div className='w-full h-fit p-2'><h2>PWater Colors</h2> </div>
                {
-                  itms[lang].Colours.WaterColour.map((color_item, id)=>{
+                  the_items.Colours.WaterColour.map((_item, id)=>{
                         return(
-                           <div key={id}>
-                              <ContentHeader text={color_item.name} />
-                              <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                              {color_item.content.map((color_item_content, id)=>{
-                                 return(<Card key={id} name={color_item_content} />)
-                              })}
-                           </div>
+                           <Card key={id} item={_item} />
                         )
                      }
                   )
@@ -140,13 +119,9 @@ export default function Content(){
                <hr/>
                <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'ألوان حجري':'Palette'}</h2> </div>
                {
-                  itms[lang].Colours.Palette.map((color_item, id)=>{
+                  the_items.Colours.Palette.map((_item, id)=>{
                         return(
-                           <div key={id}>
-                              <ContentHeader text={color_item.name} />
-                              <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                             
-                           </div>
+                           <Card key={id} item={_item} />
                         )
                      }
                   )
@@ -154,55 +129,48 @@ export default function Content(){
             </div>
          </div>
 
-         <div className='w-4/5 min-h-10 h-fit bg-red-200 p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-            <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'أدوات الوح':'Whiteboard tools'}</h2> </div>
+         <div className='w-4/5 min-h-10 h-fit p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+         { lang == 'en'? <SectionHeader text={'Whiteboards tools'}/>:<SectionHeaderAR text={'أدوات السبورة'}/>}
+         <hr></hr>
+         <ContentHeader text={'Erasers'} />
             <div className='w-full h-fit flex flex-row flex-wrap'>
-            {
-                  itms[lang].WhiteBoards.map((color_item, id)=>{
-                        return(
-                           <div key={id}>
-                              <ContentHeader text={color_item.name} />
-                              <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                              {color_item.content.map((color_item_content, id)=>{
-                                 return(<Card key={id} name={color_item_content} />)
-                              })}
-                           </div>
-                        )
-                     }
-                  )
+            {the_items.WhiteBoards.Erasers.map(
+               (_item, id)=>{
+                  return <Card key={id} item={_item} />
                }
+            )}
             </div>
-         </div>
-
-         <div className='w-4/5 min-h-10 h-fit bg-red-200 p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-            <div className='w-full h-fit p-2'><h2>Whaite Board Content</h2> </div>
+        
+         <hr></hr>
+         <ContentHeader text={'Markers'} />
             <div className='w-full h-fit flex flex-row flex-wrap'>
-            {
-               itms[lang].Highlighters.map((color_item, id)=>{
-                     return(
-                        <div key={id}>
-                           <ContentHeader text={color_item.name} />
-                           <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                           {color_item.content.map((color_item_content, id)=>{
-                              return(<Card key={id} name={color_item_content} />)
-                           })}
-                        </div>
-                     )
-                  }
-               )
-            }
+            {the_items.WhiteBoards.Markers.map(
+               (_item, id)=>{
+                  return <Card key={id} item={_item} />
+               }
+            )}
+            </div>
+         <ContentHeader text={'Refills'} />
+            <div className='w-full h-fit flex flex-row flex-wrap'>
+            {the_items.WhiteBoards.Refill.map(
+               (_item, id)=>{
+                  return <Card key={id} item={_item} />
+               }
+            )}
             </div>
          </div>
 
-         <div className='w-4/5 min-h-10 h-fit bg-red-200 p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+         <div className='w-4/5 min-h-10 h-fit p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
+         { lang == 'en'? <SectionHeader text={'Highlighters'}/>:<SectionHeaderAR text={'أقلام تعليم'}/>}
             <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'أقلام تعليم':'Higlighters'}</h2> </div>
+             
             <div className='w-full h-fit flex flex-row '>
             {
-               itms[lang].Highlighters.map((_item, id)=>{
+               the_items.Highlighters.map((_item, id)=>{
                      return(
-                        
-                           <Card key={id} name={_item.name} />
-                        
+                      
+                           <Card key={id} item={_item.name} />
+                       
                      )
                   }
                )

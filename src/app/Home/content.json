@@ -2,163 +2,155 @@
     "en":{
         "Pens":{
             "Pencils":[
-                {"name":"Doms","content":["Karbon","Fusion","YID"]},
-                {"name":"Zero","content":["801"]},
-                {"name":"Chiness Pencils","content":["With Shapes"]}
+                {"name":"Doms","content":[{"name":"Karbon","price":10},{"name":"Fusion","price":10},{"name":"YID","price":10}]},
+                {"name":"Zero","content":[{"name":"801","price":10}]},
+                {"name":"Chiness Pencils","content":[{"name":"With Shapes","price":10}]}
             ],
             "Pens":
             [
                 {
-                    "name":"Claro","contet":["Technic","Ultima","Chroma"]
+                    "name":"Claro","contet":[{"name":"Technic","price":2500},{"name":"Ultima","price":3000},{"name":"Chroma","price":1000}]
                 },
                 {
-                    "name":"Zero","contet":["101"]
+                    "name":"Zero","contet":[{"name":"101","price":3000}]
                 },
                 {
-                    "name":"Hauser","contet":["XO"]
+                    "name":"Hauser","contet":[{"name":"XO","price":2500}]
                 },{
-                    "name":"Multi Colored","contet":["6 colors","4 colors short"]
+                    "name":"Multi Colored","contet":[{"name":"6 colors","price":10000},{"name":"4 colors short","price":5500}]
                 },{
-                    "name":"Chiness Pens","contet":["Pens with Shapes"]
+                    "name":"Chiness Pens","contet":[{"name":"Pens with Shapes","price":10000}]
                 }
             ]
         },
         "NoteBooks":[
             {
-                "name":"MOB","content":["70","140","180"]
+                "name":"MOB","content":[{"name":"70","price":6500},{"name":"140","price":22000},{"name":"200","price":20}]
             },
             {
-                "name":"Al-Amany","content":["70","140","pocket"]
+                "name":"Al-Amany","content":[{"name":"70","price":20},{"name":"140","price":20}]
             },
             {
-                "name":"Al-Adib","content":["70"]
+                "name":"Al-Adib","content":[{"name":"70","price":10000}]
             },
             {
-                "name":"Parts","content":["2 Prt","3 Part","5 Part"]
+                "name":"Parts","content":[{"name":"2 parts","price":22000},{"name":"3 parts","price":26000},{"name":"5 parts","price":32000}]
             },
             {
-                "name":"Music Books","content":["Large","Small"]
+                "name":"Music Books","content":[{"name":"medium","price":3500}]
             }
         ],
         "Colours":{
             "Wooden":[
                 {
                     "name":"Zero",
-                    "content":["24Tall","24/12 Tall","12 Short","12/6 Shor"]
+                    "content":[{"name":"24Tall","price":22000},{"name":"24/12 Tall","price":24000},{"name":"12 Short","price":10000},{"name":"12/6 Short","price":12000}]
                 },
                 {
-                    "name":"Hauser","content":["12 Tall"]
+                    "name":"Hauser","content":[{"name":"12 Tall","price":20000}]
                 },
                 {
-                    "name":"C3","content":["12 tall","12 medium","12 Small"]
+                    "name":"C3","content":[{"name":"12 tall"},{"name":"12 medium","price":10000},{"name":"12 Small","price":5500}]
                 }
             ],
             "WaterColour":[
-                {"name":"Doms","content":["24"]},
-                {"name":"Other","content":["24"]}
+                {"name":"Doms 24","price":16000},
+                {"name":"Other 27","price": 12000}
             ],
-            "Palette":["12 big","8 Small"]
+            "Palette":[{"name":"12 small","price":12000},{"name":"8 small","price":8000}]
         },
-        "WhiteBoards":[
-            {"name":"Erasers" ,"content":[ "Mat","Doodly"]},
-            {"name":"Markers" ,"content":["MOB","Zero"]},
-            {"name":"Refill"  ,"content":["MOB","Zero"]}
-        ],
+        "WhiteBoards":{
+            "Erasers":[ {"name":"Mat","price":8000},{"name":"Doodly","price":8000}],
+            "Markers":[ {"name":"MOB","price":3000},{"name":"Zero","price":3000}],
+            "Refill" :[ {"name":"MOB","price":1000},{"name":"Zero","price":1500}]
+        },
         "Highlighters":[
-            {"name":"Tender","content":["Pink","Phosphore","Blue"]},
-            {"name":"Zero",  "content":["Two Colors Highlighter"]}
+            {"name":"Tender","content":[{"name":"Pink","price":3000},{"name":"Phosphore","price":3000},{"name":"Blue","price":3000}]},
+            {"name":"Zero",  "content":[{"name":"Two Colors Highlighter","price":7000}]}
         ],
         "StickNotes":[
-            ["Small","medium","Shapes"]
-        ],
+            {"name":"Small","price":5000},{"name":"Medium","price":6500},{"name":"Shapes","price":13000}
+        ]
+        ,
         "Rulers":[
-            "10 cm","30 cm","10 cm steel","30 cm steel"
+            {"name":"10 cm","price":2500},{"name":"30 cm","price":3500},{"name":"10 cm steel","price":3500},{"name":"30 cm steel","price":5500}
         ]
     },
     "ar":{
         "Pens":{
             "Pencils":[
-                {"name":"دومز","content":["Karbon","Fusion","YID"]},
-                {"name":"زيرو","content":["801"]},
-                {"name":"قلم رصاص صيني","content":["With Shapes"]}
+                {"name":"دومز","content":[{"name":"كاربون","price":2000},{"name":"فيوجن","price":2000},{"name":"واي اي دي","price":2000}]},
+                {"name":"زيرو","content":[{"name":"801","price":2000}]},
+                {"name":"رصاص صيني","content":[{"name":"مع اشكال","price":10000}]}
             ],
             "Pens":
             [
                 {
-                    "name":"كلارو","contet":["تكنك","التيما","كروما","جيل"]
+                    "name":"كلارو","contet":[{"name":"تكنك","price":2500},{"name":"التيما","price":3000},{"name":"كروما","price":1000}]
                 },
                 {
-                    "name":"زيرو","contet":["101"]
+                    "name":"زيرو","contet":[{"name":"101","price":3000}]
                 },
                 {
-                    "name":"هاوسر","contet":["XO"]
+                    "name":"هاوسر","contet":[{"name":"XO","price":2500}]
                 },{
-                    "name":"قلم متعدد","contet":["6 الوان","4 الوان"]
+                    "name":"الوان متعددة","contet":[{"name":"6 الوان","price":10000},{"name":"4 الوان","price":5500}]
                 },{
-                    "name":"اقلام صينية","contet":["اقلام مع اشكال"]
+                    "name":"قلم صيني","contet":[{"name":"مع اشكال","price":10000}]
                 }
             ]
-        },"NoteBooks":{
-            "Medium":[{
-                "name":"موب","content":["صفحة 70","صفحة 140"," صفحة 180"]
-                },
-                {
-                    "name":"الأماني","content":["صفحة 70","صفحة 140"]
-                },
-                {
-                    "name":"الأديب","content":["صفحة 70"]
-                }
-            ],
-            "College":[{
-                "name":"موب","content":["صفحة 70","صفحة 140"]
-                },
-                {
-                    "name":"الأماني","content":["صفحة 70","صفحة 140"]
-                },
-                {
-                    "name":"الأديب","content":["صفحة 70"]
-                },
-                {
-                    "name":"أقسام","content":["قسمين","3 اقسام","5 اقسام"]
-                }
-            ],
-            "MusicBook":{
-                "name":"دفاتر موسيقا","content":["كبير","وسط"]
-            }
         },
+        "NoteBooks":[
+            {
+                "name":"موب","content":[{"name":"70","price":6500},{"name":"140","price":22000},{"name":"200","price":20}]
+            },
+            {
+                "name":"الاماني","content":[{"name":"70","price":20},{"name":"140","price":20}]
+            },
+            {
+                "name":"الاديب","content":[{"name":"70","price":10000}]
+            },
+            {
+                "name":"اقسام","content":[{"name":"قسمين","price":22000},{"name":"3 اقسام","price":26000},{"name":"5 اقسام","price":32000}]
+            },
+            {
+                "name":"دفاتر موسيقا","content":[{"name":"وسط","price":3500}]
+            }
+        ],
         "Colours":{
             "Wooden":[
                 {
                     "name":"زيرو",
-                    "content":["24 لون طويل","24 لون طويل12 قلم","12 لون قصير","12 لون 6 قلم "]
+                    "content":[{"name":"24 طويل","price":22000},{"name":"24/12 طويل","price":24000},{"name":"12 وسط","price":10000},{"name":"12/6 وسط","price":12000}]
                 },
                 {
-                    "name":"هاوسر","content":["12 لون طويل"]
+                    "name":"هاوسر","content":[{"name":"12 طويل","price":20000}]
                 },
                 {
-                    "name":"C3","content":["12 لون طويل","12 لون وسط","12 لون قصير"]
+                    "name":"سي3","content":[{"name":"12 طويل"},{"name":"12 وسط","price":10000},{"name":"12 قصير","price":5500}]
                 }
             ],
             "WaterColour":[
-                {"name":"دومز","content":["24 عصارة"]},
-                {"name":"نوع اخر","content":["24 عصارة"]}
+                {"name":"24 عصارة دومز","price":16000},
+                {"name":"27 عصارة","price": 12000}
             ],
-            "Palette":["12 لون حجم كبير","8 لون حجم صغير"]
+            "Palette":[{"name":"12 كبيرة","price":12000},{"name":"8 الوان صغيرة","price":8000}]
         },
-        "WhiteBoards":[
-            {"name":"محايات" ,"content":[ "Mat","Doodly","زيرو"]},
-            {"name":"قلم لوح" ,"content":["موب","زيرو"]},
-            {"name":"خراطيش"  ,"content":["موب","زيرو"]}
-        ],
+        "WhiteBoards":{
+            "Erasers":[ {"name":"ام اي تي","price":8000},{"name":"دودلي","price":8000}],
+            "Markers":[ {"name":"موب","price":3000},{"name":"زيرو","price":3000}],
+            "Refill" :[ {"name":"موب","price":1000},{"name":"زيرو","price":1500}]
+        },
         "Highlighters":[
-            {"name":"تندر","content":["Pink","Phosphore","Blue"]},
-            {"name":"زيرو",  "content":["Two Colors Highlighter"]}
+            {"name":"تندر","content":[{"name":"زهري","price":3000},{"name":"فوسفوري","price":3000},{"name":"ازرق","price":3000}]},
+            {"name":"زيرو",  "content":[{"name":"قلم طرفين","price":7000}]}
         ],
         "StickNotes":[
-            ["صغير","وسط مربعات"," اشكال","اشكال مربعات"]
-        ],
+            {"name":"صغيرة","price":5000},{"name":"وسط","price":6500},{"name":"اشكال","price":13000}
+        ]
+        ,
         "Rulers":[
-            "10 سم","30 سم","10 سم معدن","30 سم معدن"
+            {"name":"10 سم","price":2500},{"name":"30 سم","price":3500},{"name":"10 سم معدن","price":3500},{"name":"30 سم معدن","price":5500}
         ]
     }
 }
