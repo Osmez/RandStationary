@@ -1,5 +1,5 @@
 'use client'
-import { signup } from '../actions/signuo';
+import { signup } from '../actions/signup';
 import { useFormState, useFormStatus } from 'react-dom';
 import { LanguageContext } from '../Context/LanguageContext';
 import { useContext, useEffect } from 'react';
