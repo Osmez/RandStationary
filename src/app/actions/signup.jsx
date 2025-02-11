@@ -1,5 +1,5 @@
 'use server'
-export default async function signup(state, formData){
+export async function signup(state, formData){
     const uname = formData.get('name');
     const uemail = formData.get('email');
     const upassword = formData.get('password');

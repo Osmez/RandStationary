@@ -2,7 +2,7 @@
 import { cookies } from "next/headers";
 import {SignupFormSchema} from '@/app/lib/definitions';
 
-export default async function authenticate(state, formData ) {
+export async function authenticate(state, formData ) {
 
   try {
    
