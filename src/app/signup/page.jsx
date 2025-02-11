@@ -36,7 +36,7 @@ export default function Signup(){
     return (
       <section className=' pt-[120px] min-h-screen'>
           
-          <form action={dispatch} className="m-auto w-56 border-2 border-black p-4 bg-slate-500" method='post'>
+          <form action={dispatch} className="m-auto w-56 border-2 border-black p-4 bg-slate-500">
           <h4>Signup</h4>
               <div className='mt-2'>
                   <label htmlFor='name' dir={lang == 'en'? 'ltr':'rtl'} >{lang == 'en'? 'Your Name:':'الاسم:'}</label>

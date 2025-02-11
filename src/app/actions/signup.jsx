@@ -1,5 +1,5 @@
 'use server'
-export async function signup(state, formData){
+export default async function signup(state, formData){
     const uname = formData.get('name');
     const uemail = formData.get('email');
     const upassword = formData.get('password');
@@ -14,11 +14,9 @@ export async function signup(state, formData){
     try{
       const reso = await fetch('http://randauth.rf.gd/sign/signup.php',{
         method:"POST",
-        headers: hdrs,
-        body: theBody,
       })
 
-      return reso.text();
+      return reso.text(); 
     }catch(error){
       if (error) {
         switch (error.type) {
@@ -31,4 +29,3 @@ export async function signup(state, formData){
     }
   }
 
-  //.then(res=>res.text()).then((data)=>{console.log(data)});
