@@ -13,7 +13,7 @@ export const UsersProvider = ({ children }) => {
   const getTheUser = ()=> theUser
 
   const clearUsers = () => {
-    setTheUser({nm:'user'});
+    setTheUser({});
   };
 
   return (

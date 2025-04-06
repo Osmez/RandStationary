@@ -1,183 +1,81 @@
 "use client"
-import React, { useContext, useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import itms from './content.json';
-import Card from './card';
-import ContentHeader from './ContentHeader';
-import SectionHeader from './sectionHeader';
-import SectionHeaderAR from './sectionheaderar'
-import { LanguageContext } from '../Context/LanguageContext';
+import Container from '../Container/Container';
+import texts from '@/app/texts.json';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from 'next/image';
+
+const box={
+   borderRadius: "10px",
+}
 
 
-export default function Content(){
+export default function Content({lng, ub, mad}){
    
-   const lang = useContext(LanguageContext);
-   const the_items = itms[lang];
-   
+   const the_items = itms[lng];
+   const [theItem, setTheItem] = useState(null);
+
+   const viewItem = (item)=>{
+      setTheItem(item);
+   }
+   const closeViewItem = ()=>{
+      setTheItem(null);
+   }
    
    return (
-   <section>
-      <h2 className='text-center text-[8vw] font-bold after:w-6 after:h-8 after:bg-red-400'>Products</h2>
-      <p className='text-center text-[2vw]'>BEST STATIONERY ITEMS FOR KIDS</p>
-      
-         <section className="w-full px-8 py-4 flex flex-wrap justify-center align-top" dir={`${ lang == 'en'? 'ltl':'rtl'}`}>
-      
-               
-         <div className='w-4/5 min-h-10 h-fit p-2 border rounded-md shadow-xl flex flex-col' >
-            { lang == 'en'? <SectionHeader text={'Pens and Pencils'}/>:<SectionHeaderAR text={'أقلام'}/>}
-         
-            {
-               the_items.Pens.Pens.map(
-                  (items)=>{
-                     return(
-                     <>
-                        <div className='w-full h-fit p-2'><h2>{items.name}</h2> </div>
-                        <div  className='w-full h-fit flex flex-row flex-wrap'>
-                           {items.contet.map((_item,id)=>{ 
-                              return(
-                                 
-                                    <Card key={id} item={_item} />
-                                 
-                              )
-                           })}
-                        </div>
-                     </>
-                     )
-                  }
-               )
-            }
-            <hr></hr>{
-            the_items.Pens.Pencils.map(
-                  (items)=>{
-                     return(
-                     <>
-                        <div className='w-full h-fit p-2'><h2>{items.name}</h2> </div>
-                        <div  className='w-full h-fit flex flex-row'>
-                           {items.content.map((_item,id)=>{ 
-                              return(
-                                 <Card item={_item} key={id} />
-                              )
-                           })}
-                        </div>
-                     </>
-                     )
-                  }
-               )
-            }
-         </div>
-         <div className='w-4/5 min-h-10 h-fit  p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-            
-            { lang == 'en'? <SectionHeader text={'Notebooks'}/>:<SectionHeaderAR text={'دفاتر'}/>}
-            <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'دفاتر':'Notebooks'}</h2></div>
-            
-               {
-                  the_items.NoteBooks.map((the_item)=>{
-                     return(
-                        <>
-                           <div className='w-full h-fit p-2'><h2></h2>{the_item.name}</div>
-                           <div className='w-full h-fit flex flex-row '>
-                                 {the_item.content.map((_item,id)=>{
-                                    return(
-                                       <Card key={id} item={_item} />
-                                    )
-                                 })}
-                           </div>
-                        </>
-                     )
-                  })
-               }
-            
-         </div> 
-
-         <div className='w-4/5 min-h-10 h-fit  p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-         { lang == 'en'? <SectionHeader text={'Colours'}/>:<SectionHeaderAR text={'ألوان'}/>}
-            <div className='w-full h-fit flex flex-row flex-wrap'>
-            
-               {
-                  the_items.Colours.Wooden.map((color_item)=>{
-                        return(
-                           <>
-                              <ContentHeader text={color_item.name} />
-                              <div className='w-full h-fit p-2'><h2></h2>{color_item.name}</div>
-                              {color_item.content.map((_item, id)=>{
-                                 return(<Card key={id} item={_item} />)
-                              })}
-                           </>
-                        )
-                     }
-                  )
-               }
-               <hr/>
-               <div className='w-full h-fit p-2'><h2>PWater Colors</h2> </div>
-               {
-                  the_items.Colours.WaterColour.map((_item, id)=>{
-                        return(
-                           <Card key={id} item={_item} />
-                        )
-                     }
-                  )
-               }
-               <hr/>
-               <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'ألوان حجري':'Palette'}</h2> </div>
-               {
-                  the_items.Colours.Palette.map((_item, id)=>{
-                        return(
-                           <Card key={id} item={_item} />
-                        )
-                     }
-                  )
-               }
-            </div>
-         </div>
-
-         <div className='w-4/5 min-h-10 h-fit p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-         { lang == 'en'? <SectionHeader text={'Whiteboards tools'}/>:<SectionHeaderAR text={'أدوات السبورة'}/>}
-         <hr></hr>
-         <ContentHeader text={'Erasers'} />
-            <div className='w-full h-fit flex flex-row flex-wrap'>
-            {the_items.WhiteBoards.Erasers.map(
-               (_item, id)=>{
-                  return <Card key={id} item={_item} />
-               }
-            )}
-            </div>
+      <>
+         <div className='w-full h-1vh'></div>
         
-         <hr></hr>
-         <ContentHeader text={'Markers'} />
-            <div className='w-full h-fit flex flex-row flex-wrap'>
-            {the_items.WhiteBoards.Markers.map(
-               (_item, id)=>{
-                  return <Card key={id} item={_item} />
-               }
-            )}
-            </div>
-         <ContentHeader text={'Refills'} />
-            <div className='w-full h-fit flex flex-row flex-wrap'>
-            {the_items.WhiteBoards.Refill.map(
-               (_item, id)=>{
-                  return <Card key={id} item={_item} />
-               }
-            )}
-            </div>
-         </div>
+         <Image className='w-10/12 h-auto m-auto rounded-md' src={'/baag.png'} unoptimized={true} width={100} height={100} alt="boy with ok" />
 
-         <div className='w-4/5 min-h-10 h-fit p-2 mt-4 border rounded-md shadow-xl flex flex-col' >
-         { lang == 'en'? <SectionHeader text={'Highlighters'}/>:<SectionHeaderAR text={'أقلام تعليم'}/>}
-            <div className='w-full h-fit p-2'><h2>{lang == 'ar'? 'أقلام تعليم':'Higlighters'}</h2> </div>
-             
-            <div className='w-full h-fit flex flex-row '>
-            {
-               the_items.Highlighters.map((_item, id)=>{
-                     return(
-                      
-                           <Card key={id} item={_item.name} />
-                       
-                     )
-                  }
-               )
-            }
-            </div>
-         </div>
+         <div className='bg-white dark:bg-stone-800'>
+      <h2 style={{fontWeight: 900}} className={`text-center text-[8vw]  after:w-6 after:h-8  dark:text-stone-200 ${lng == "en"? ub.className:mad.className}`}>{texts.products[lng]}</h2>
+      <p className={`text-center text-[2vw] dark:text-stone-200 ${ub.className}`}>{texts.best[lng]}</p>
+      
+         <section className="w-full py-4 flex flex-wrap justify-center align-top dark:bg-stone-800" dir={`${ lng == 'en'? 'ltl':'rtl'}`}>
+         {
+            the_items.map(
+               (itm,id) => <Container key={id} items={itm} lng={lng} view={viewItem} close={closeViewItem} font={ub.className} arfont={mad.className}/>
+            )
+         }
+               
+        
          </section>
-      </section>
+         <AnimatePresence initial={false}>
+                {theItem ? (
+                    <motion.div
+                        className={`fixed py-4 px-2 top-0 sm:top-[80px] flex flex-col-reverse sm:flex-row sm:justify-between left-[10%] z-50 w-3/4 min-h-16 h-[80vh] bg-white border-2 border-stone-500 dark:bg-stone-700`}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0 }}
+                        style={box}
+                        key="box"
+                    >
+                        <div className='h-full w-1/2 text-center'>
+                           <Image unoptimized={true} src={theItem.img} className='h-1/2 -z-10 w-auto sm:h-full sm:w-auto absolute m-auto max-w-full max-h-full' width={100} height={100} alt="sds sved ss" />
+                        </div>
+                        <div className=' flex flex-col  p-2 h-fit w-full sm:w-1/4 rounded-md text-stone-900'>
+                           <button onClick={()=>{closeViewItem()}}>
+                              <Image src={'/exit.png'} className='w-10 h-10 float-end' width={50} height={50} alt="close icon" />
+                           </button>
+                           <div className='w-full bg-slate-300 dark:bg-stone-500 rounded-md mt-4 p-2'>
+                           <h3 style={{fontWeight:800}}>{texts.desc[lng]}:</h3>
+                           <h2>{theItem.name}</h2>
+                           <h3 style={{fontWeight:800}}>{texts.price[lng]}:</h3>
+                           <h2>{theItem.price}</h2>
+                           </div>
+                           
+                          
+                        </div>
+                    </motion.div>
+                ) : null}
+            </AnimatePresence>
+       
+      </div>
+      </>
+ 
    )
 }
+

@@ -2,10 +2,12 @@
 import { NavLinks } from '@/app/ui/nav-links';
 import RandFooter from '@/app/ui/footer';
 import "./globals.css";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import {LanguageContext} from './Context/LanguageContext';
 import { CartProvider } from './Context/cart';
-import { UsersProvider, useUsers } from './Context/usersContext';
+import { UsersProvider } from './Context/usersContext';
+
+
 
 export default function RootLayout({children}) {
 
@@ -22,12 +24,14 @@ export default function RootLayout({children}) {
     <html lang="en">
       <head>
       </head>
-      <body className='bg-white dark:bg-gray-700'>
+      <body className='bg-white dark:bg-stone-700 min-h-screen'>
         <LanguageContext.Provider value={lang}>
           <UsersProvider>
             <CartProvider>
-              <NavLinks setAr={SetLangAr} setEn={SetLangEn}/>              
-              {children}
+              <NavLinks lang={lang} setAr={SetLangAr} setEn={SetLangEn} />  
+
+               {children}
+              <RandFooter lng={lang} />
             </CartProvider>
           </UsersProvider>
         </LanguageContext.Provider>

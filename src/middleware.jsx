@@ -1,31 +1,32 @@
 import { NextResponse } from "next/server";
+import { cookies } from 'next/headers';
+ 
 
-const protectedRoutes = ['']
+const protectedRoutes = ['/dashboard'] 
 const publicRoutes = ['/login','/signup','/']
 
 export default async function middlewre(req){
    
-    const path = req.nextUrl.pathname
-    const sessionInfo = req.cookies.get('session')?.value
+    const path = req.nextUrl.pathname;
+    const sessionInfo = cookies().has('mainjob');
+    const sessValid = cookies().get('mainjob')?.value;
+    
     const isProtectedRoute = protectedRoutes.includes(path)
     const isPublicRoute = publicRoutes.includes(path)
-
-    //isLoggedIn = false;
 
     if(isProtectedRoute && req.nextUrl.pathname.startsWith('/dashboard') &&!sessionInfo ){
         return NextResponse.redirect(new URL('/login',req.nextUrl));
     }
 
-    if(isProtectedRoute && !req.nextUrl.pathname.startsWith('/dashboard') && sessionInfo ){
-        return NextResponse.redirect(new URL('/dashboard',req.nextUrl));
+    if(isProtectedRoute && req.nextUrl.pathname.startsWith('/confirm') && !sessionInfo ){
+        return NextResponse.redirect(new URL('/login',req.nextUrl));
     }
 
-    if(isProtectedRoute && sessionInfo && !req.nextUrl.pathname.startsWith('/dashboard')){
+    if(isProtectedRoute && req.nextUrl.pathname.startsWith('/confirm') &&  sessValid == 'true'){
         return NextResponse.redirect(new URL('/dashboard',req.nextUrl));
     }
 
     return NextResponse.next();
-
 }
 
 export const config ={

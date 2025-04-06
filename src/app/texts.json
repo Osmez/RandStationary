@@ -1,0 +1,107 @@
+{
+    "appName":{
+        "en":"Rand Stationary",
+        "ar":"مكتبة رند"
+    },
+    "welcome":{
+        "en":"Wellcome",
+        "ar":"مرحبا"
+    },
+    "appDescrip":{
+        "en":"Best Stationary for school and Archtict",
+        "ar":"خيارك الأفضل للمدرسة ومشاريع التصميم"
+    },
+    "products":{
+        "en":"Products",
+        "ar":"منتجتنا"
+    },
+    "home":{
+        "en":"Home",
+        "ar":"الرئيسية"
+    },
+    "about":{
+        "en":"About",
+        "ar":"معلومات عنا"
+    },
+    "login":{
+        "en":"Login",
+        "ar":"تسجيل الدخول"
+    },
+    "signup":{
+        "en":"Signup",
+        "ar":"انشاء حساب"
+    },
+    "name":{
+        "en":"Name",
+        "ar":"الاسم"
+    },
+    "password":{
+        "en":"Password",
+        "ar":"كلمة السر"
+    },
+    "email":{
+        "en":"E-mail",
+        "ar":"البريد الالكتروني"
+    },
+    "purchase":{
+        "en":"Send Bill",
+        "ar":"ارسال الفاتورة"
+    },
+    "dashboard":{
+        "en":"Dashboard",
+        "ar":"الادارة"
+    },
+    "type":{
+        "en":"Type",
+        "ar":"النوع"
+    },
+    "removeFromCart":{
+        "en":"Remove from cart",
+        "ar":"ازالة من المشتريات"
+    },
+    "addToCart":{
+        "en":"Add to cart",
+        "ar":"إضافة للمشتريات"
+    },
+    "price":{
+        "en":"Price",
+        "ar":"السعر"
+    },
+    "amount":{
+        "en":"Amount",
+        "ar":"الكمية"
+    },
+    "item":{
+        "en":"Item",
+        "ar":"المادة"
+    },
+    "phone":{
+        "en":"Phone number",
+        "ar":"رقم الهاتف"
+    },
+    "confirmp":{
+        "en":"Confirm Password",
+        "ar": "تأكيد كلمة السر"
+    },
+    "createacc":{
+        "en":"Don't have account? Create Account",
+        "ar":"ليس لديك حساب ؟انشاء حساب"
+    },
+    "haveacc":{
+        "en":"log in instead",
+        "ar":"هل لديك حساب؟ سجل دخول"
+    },
+    "totalprice":{
+        "en":"Total Price",
+        "ar":"السعر الاجمالي"
+    },
+    "noitems":{
+        "en":"No Items Yet",
+        "ar":"لا وجد مشتريات"
+    }
+  
+
+
+    
+
+}
