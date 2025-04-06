@@ -19,11 +19,11 @@ export default function Cart({lang, change, isVis}){
     
     const hasContent = cartItems.length > 0;
 
-    const submitBuys = async () =>{
+    const submitBuys = () =>{
         
         if(message == 'wait'){return;}
         setMessage('wait');
-        const res = await buyment(cartItems);
+        const res = buyment(cartItems);
         if(res.message){
             if(res.message  == 'success'){
                 clearCart();
