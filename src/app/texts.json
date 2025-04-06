@@ -3,9 +3,24 @@
         "en":"Rand Stationary",
         "ar":"مكتبة رند"
     },
+    "best":{
+        "en":"BEST STATIONERY ITEMS",
+        "ar":"أفضل أدوات القرطاسية"
+    },
+    "wait":{
+        "en":"Please Wait!",
+        "ar":"الرجاء الانتظار"
+    },
+    "clear":{
+        "en":"Clear",
+        "ar":"مسح العناصر"
+    },
     "welcome":{
         "en":"Wellcome",
         "ar":"مرحبا"
+    },"guest":{
+        "en":"Guest",
+        "ar":"ضيف"
     },
     "appDescrip":{
         "en":"Best Stationary for school and Archtict",
@@ -98,10 +113,69 @@
     "noitems":{
         "en":"No Items Yet",
         "ar":"لا وجد مشتريات"
+    },
+    "dir":{
+        "en":"ltr",
+        "ar":"rtl"
+    },
+    "ccode":{
+        "en":"Confirm Code",
+        "ar":"رمز التأكيد"
+    },
+    "confrimtext":{
+        "en":"Please enter code to confirm your email",
+        "ar":"الرجاء ادخال رمز تأكيد الإيميل"
+    },
+    "check":{
+        "en":"Check",
+        "ar":"تحقق"
+    },
+    "confirmyourmail":{
+        "en":"Confirm your Email",
+        "ar":"قم بتأكيد الأيميل"
+    },
+    "dop":{
+        "en":"Date of purchase",
+        "ar":"تاريخ الشراء"
+    },
+    "itemname":{
+        "en":"Item Name",
+        "ar":"اسم المادة"
+    },
+    "itemprice":{
+        "en":"Item price",
+        "ar":"السعر الإفرادي"
+    },"textdir":{
+        "en":"text-left",
+        "ar":"text-right"
+    },"success":{
+        "en":"Success",
+        "ar":"نجاح"
+    },"error":{
+        "en":"Check Connection",
+        "ar":"تحقق من الاتصال"
+    },"invalid":{
+        "en":"Error Crendintals",
+        "ar":"تحقق من المعلومات"
+    },"cpass":{
+        "en":"Error Confirm Password",
+        "ar":"الرجاء تأكيد كلمة المرور"
+    },"phl":{
+        "en":"Phone Number must Contain 10 Numbers",
+        "ar":"رقم الهاتف يجب أن كون من 10 أرقام"
+    },"nml":{
+        "en":"Name too Short",
+        "ar":"يجب أن يكون الاسم اكثر من 3 أحرف"
+    },"phn":{
+        "en":"Invlaid Number",
+        "ar":"رقم الهاتف غير صحيح"
+    },"colors":{
+        "blue":"bg-blue-600",
+        "green":"bg-green-600",
+        "red":"bg-red-600",
+        "black":"bg-stone-900"
+    },"desc":{
+        "en":"Description",
+        "ar":"لوصف"
     }
-  
-
-
-    
-
 }

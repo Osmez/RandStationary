@@ -21,7 +21,7 @@ export default function UserStatus({lang, change, isVis, font}){
                 console.log(signed);
             }
            
-        },[]
+        },[signed]
     )
     const checU = ()=> CheckUser();
     const box={

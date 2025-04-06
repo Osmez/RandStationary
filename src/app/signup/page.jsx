@@ -25,7 +25,7 @@ export default function Signup(){
 
     useEffect(()=>{
       hasSignd();
-    },[]);
+    },[errorMessage]);
 
     const hasSignd = ()=>{
       if(errorMessage == "success"){
