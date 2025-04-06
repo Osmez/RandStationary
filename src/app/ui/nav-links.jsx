@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
 import texts from '@/app/texts.json';
 import { Ubuntu, Mada } from 'next/font/google';
-import Cart from '@/app/Cart/cart';
+import Cart from '../Cart/cart';
 import UserStatus from './userStatus';
 import { useState } from 'react';
 
