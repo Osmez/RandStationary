@@ -1,6 +1,6 @@
 import HomeCard from '../Cards/HomeCard';
 
-export default function({items, lng, view, font, arfont}){
+export default function MidContainer({items, lng, view, font, arfont}){
     return  <>
     
     <div  className='w-full h-fit px-[18px] flex flex-row flex-wrap sm:justify-center lg:justify-start border-t-2 border-stone-200 dark:border-stone-700'>

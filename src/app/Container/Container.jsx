@@ -1,5 +1,5 @@
 'use client'
-import Midconatiner from '../Midconatiner/Midcontainer';
+import MidConatiner from '../Midconatiner/Midcontainer';
 import SectionHeader from '@/app/Home/sectionHeader';
 import SectionHeaderAR from '@/app/Home/sectionheaderar';
 
@@ -15,7 +15,7 @@ export default function Container({items, lng, view, font, arfont}){
             <div  className='w-full h-fit border-t-2 border-stone-200 dark:border-stone-700'>
                 {items.content.map((_item,_id)=>{ 
                     return(
-                       <Midconatiner key={_id} items={_item} lng={lng} view={view}  font={font} arfont={arfont} />
+                       <MidConatiner key={_id} items={_item} lng={lng} view={view}  font={font} arfont={arfont} />
                     )
                 })}
             </div>
