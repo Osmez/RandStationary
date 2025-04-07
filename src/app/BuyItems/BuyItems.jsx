@@ -7,7 +7,7 @@ import CartItem from './CartItem';
 import texts from '@/app/texts.json'
 import { useState } from 'react';
 
-export default function BuyItems(){
+export default function BuyItems({lang, change, isVis}){
 
     const { cartItems, clearCart , addToCart} = useCart();
     
