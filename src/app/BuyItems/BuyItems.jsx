@@ -3,7 +3,7 @@ import { useCart } from '../Context/cartContext';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
 import { buyment } from '@/app/actions/buyment';
-import CartItem from '@/app/Cart/CartItem';
+import CartItem from './CartItem';
 import texts from '@/app/texts.json'
 import { useState } from 'react';
 
