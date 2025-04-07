@@ -4,7 +4,7 @@ import RandFooter from '@/app/ui/footer';
 import "./globals.css";
 import { useState } from "react";
 import {LanguageContext} from './Context/LanguageContext';
-import { CartProvider } from './Context/cart';
+import { CartProvider } from './Context/cartContext';
 import { UsersProvider } from './Context/usersContext';
 
 

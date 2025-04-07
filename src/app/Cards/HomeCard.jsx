@@ -1,5 +1,5 @@
 "use client"
-import { useCart } from '../Context/cart';
+import { useCart } from '../Context/cartContext';
 import texts from '@/app/texts.json';
 import Image from 'next/image';
 

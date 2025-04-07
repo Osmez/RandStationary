@@ -1,5 +1,5 @@
 'use client'
-import { useCart } from '../Context/cart';
+import { useCart } from '../Context/cartContext';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
 
