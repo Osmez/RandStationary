@@ -7,6 +7,10 @@ import CartItem from './CartItem';
 import texts from '@/app/texts.json'
 import { useState } from 'react';
 
+const box={
+    borderRadius: "10px",
+}
+
 export default function BuyItems({lang, change, isVis}){
 
     const { cartItems, clearCart , addToCart} = useCart();
