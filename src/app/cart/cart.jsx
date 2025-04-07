@@ -19,21 +19,7 @@ export default function Cart({lang, change, isVis}){
     
     const hasContent = cartItems.length > 0;
 
-    const submitBuys = () =>{
-        
-        if(message == 'wait'){return;}
-        setMessage('wait');
-        const res = buyment(cartItems);
-        if(res.message){
-            if(res.message  == 'success'){
-                clearCart();
-            }
-            setMessage(res.message);
-            setTimeout(()=>{setMessage(null)},2000);
-            subming = false;
-        }
-        
-    }
+    
 
     return(
         <>
@@ -49,7 +35,7 @@ export default function Cart({lang, change, isVis}){
                     >
                     {hasContent? cartItems.map((tm,id) => <CartItem key={id} name={tm.name} amount={tm.amount} total={texts.totalprice[lang]} lang={lang} price={tm.price*tm.amount} />):texts.noitems[lang]}
                     {hasContent && message != 'wait' ? <div>
-                        <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{submitBuys()}}>{texts.purchase[lang]}</button>
+                        <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{console.log('submit')}}>{texts.purchase[lang]}</button>
                         <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{clearCart()}}>{texts.clear[lang]}</button>
                     </div>
                     :''}
