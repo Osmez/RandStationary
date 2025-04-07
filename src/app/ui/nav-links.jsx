@@ -6,9 +6,8 @@ import { motion } from "framer-motion";
 import texts from '@/app/texts.json';
 import { Ubuntu, Mada } from 'next/font/google';
 import UserStatus from './userStatus';
-import Cart from '../Cart/Cart';
 import { useState } from 'react';
-
+import BuyItems from '@/app/BuyItems/BuyItems';
 const box={
     borderRadius: "10px",
 }
@@ -49,7 +48,7 @@ export function NavLinks({lang ,setAr, setEn}){
 
              
               <UserStatus lang={lang} font={fnt} change={changeVisible} isVis={whatVisible}/>
-             <Cart lang={lang} font={fnt} change={changeVisible} isVis={whatVisible}/>
+              <BuyItems />
               {
                 lang == 'en'? <button className=' p-2 border-2 border-stone-500 rounded-lg dark:bg-green-900' onClick={setAr}>عربي</button>: <button onClick={setEn} className=' p-2 border-2 border-stone-400 rounded-lg dark:bg-green-900'>En</button>
               }
