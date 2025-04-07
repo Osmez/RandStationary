@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import texts from '@/app/texts.json';
 import { Ubuntu, Mada } from 'next/font/google';
 import UserStatus from './userStatus';
-import Cart from '../Cart/cart.jsx';
+import Cart from '../Cart/Cart';
 import { useState } from 'react';
 
 const box={
