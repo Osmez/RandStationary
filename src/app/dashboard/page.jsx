@@ -60,7 +60,7 @@ export default function Dashboard(){
                     </div>})
         }
       </div>
-    </div>:<p>texts.waitloading["en"]</p>  }             
+    </div>:<p>{texts.waitloading["en"]}</p>  }             
 </section>
     )
 }
