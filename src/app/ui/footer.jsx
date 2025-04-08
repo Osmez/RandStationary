@@ -17,7 +17,7 @@ const ub = Ubuntu({
   });
 
 export default function RandFooter({lng}){
-    return <footer className="w-full h-fit p-2 bg-stone-800 border-t-2 border-stone-700">
+    return <footer className="w-full mt-6 h-fit p-2 bg-stone-800 border-t-2 border-stone-700">
         {lng == "en"?
             <>
                 <h2 style={{fontWeight:900}} className={`w-full text-center text-[50px] ${ub.className}`}>Rand <br/> Stationery</h2>

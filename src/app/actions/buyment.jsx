@@ -26,7 +26,7 @@ export async function buyment(Data){
     const budy = JSON.stringify(bodyObject);
     
     try{
-        const res = await fetch('http://127.0.0.1:8000/api/buyments',
+        const res = await fetch('http://osmezbase.infy.uk/public/api/buyments',
         {method: "POST" ,headers: hdrs,body: budy})
         const jres = await res.json();
         return jres;
@@ -44,7 +44,7 @@ export async function getBuyment(mail){
         const hdrs = new Headers();
         hdrs.append('Content-Type' ,  'application/json');
         hdrs.append('Accept' ,  'application/json');
-        const res = await fetch('http://127.0.0.1:8000/api/dashboard/',
+        const res = await fetch('http://osmezbase.infy.uk/public/api/dashboard/',
         {method: "POST" ,headers: hdrs,body:JSON.stringify({email: mail})})
         .then(res => res.json())
         return res.then((res) => res)

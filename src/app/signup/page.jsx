@@ -34,9 +34,9 @@ export default function Signup(){
     }
   
     return (
-      <section className=' pt-[120px] min-h-screen'>
+      <section className=' pt-[120px] min-h-screen mb-4'>
           
-          <form action={dispatch} className="m-auto w-[280px] border-2 border-black p-4 bg-stone-700">
+          <form action={dispatch} className="m-auto w-[280px] border-2 border-black p-4 bg-slate-100 dark:bg-stone-700">
           <h3 className='text-center font-bold text-xl'>{texts.createacc[lang]}</h3>
               <div className='mt-2'>
                   <label className='w-full block' htmlFor='name' dir={lang == 'en'? 'ltr':'rtl'} >{texts.name[lang]}</label>

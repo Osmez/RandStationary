@@ -27,7 +27,7 @@ export async function authenticate(state, formData ) {
     hdrs.append('Accept' ,  'application/json');
     const body={email: uname, password: upassword}
     
-    const res = await fetch('http://127.0.0.1:8000/api/login',{
+    const res = await fetch('http://osmezbase.infy.uk/public/api/login',{
       method:"POST",
       headers: hdrs,
       body:JSON.stringify(body)
@@ -68,7 +68,7 @@ export async function SendVerify(){
   hdrs.append('Content-Type' ,  'application/json');
   hdrs.append('Accept' ,  'application/json');
    
-  const res = await fetch('http://127.0.0.1:8000/api/verify',
+  const res = await fetch('http://osmezbase.infy.uk/public/api/verify',
                       {method:'post',
                       headers:hdrs,
                       body:{id:id}
@@ -86,7 +86,7 @@ export async function SendCode(state, formData){
   hdrs.append('Content-Type' ,  'application/json');
   hdrs.append('Accept' ,  'application/json');
   try{
-    const res = await fetch('http://127.0.0.1:8000/api/verify',
+    const res = await fetch('http://osmezbase.infy.uk/public/api/verify',
       {method:'post',
       headers:hdrs,
       body:{id:id, code: vcode}

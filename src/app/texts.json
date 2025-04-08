@@ -177,5 +177,8 @@
     },"desc":{
         "en":"Description",
         "ar":"لوصف"
+    },"waitloading":{
+       "en":"Please Wait While loading!",
+       "ar":"الرجاء الانتظار ,يتم التحميل!"
     }
 }

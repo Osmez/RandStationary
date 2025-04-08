@@ -32,7 +32,7 @@ export async function signup(state, formData){
     const theBody = {name:uname,password:upassword,email:uemail,phone: uphone,status:"signup"};
     
     try{
-      const reso = await fetch('http://127.0.0.1:8000/api/signup',{
+      const reso = await fetch('http://osmezbase.infy.uk/public/api/signup',{
         method:"POST",
         headers: hdrs,
         body: JSON.stringify(theBody),

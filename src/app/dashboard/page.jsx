@@ -26,7 +26,7 @@ export default function Dashboard(){
         }
       }
       
-      if(theUser.user == undefined){
+      if(!Object.hasOwn(theUser.user,"user")){
         updateData();
       }
     }
@@ -34,20 +34,19 @@ export default function Dashboard(){
 
   return (
     <section className='w-full min-h-screen pt-[200px] px-12'>
-    {theUser.user == undefined ? 
-    <p>loading please wait!</p>:
-    <div dir={texts.dir[lang]} className={`w-full h-fit flex flex-col justify-center bg-stone-950 rounded-md p-2 sm:flex-row md:text-sm`}>
-      <div className='w-full mr-0 mb-2 h-fit bg-stone-800 p-2 rounded-md sm:w-3/12 sm:mr-2  sm:mb-0'>
+    {Object.hasOwn(theUser.user,"user") ? 
+    <div dir={texts.dir[lang]} className={`w-full h-fit flex flex-col justify-center bg-stone-100 dark:bg-stone-950 rounded-md p-2 sm:flex-row md:text-sm`}>
+      <div className='w-full mr-0 mb-2 h-fit bg-stone-200 dark:bg-stone-800bg-stone-800 p-2 rounded-md sm:w-3/12 sm:mr-2  sm:mb-0'>
           <h4 className={`mb-4 ${texts.textdir[lang]}`}><b>{texts.welcome[lang]}</b><br></br><span>{theUser.user.user.name}</span></h4>
           <h4 className={`mb-4 ${texts.textdir[lang]}`}><b>{texts.email[lang]}</b><br></br><span>{theUser.user.user.email}</span></h4>
           <h4 className={`mb-4 ${texts.textdir[lang]}`}><b>{texts.phone[lang]}</b><br></br><span>{theUser.user.user.phone}</span></h4>
           {theUser.user.user.verified? '':<Link className="w-fit block h-[50px] p-2 rounded-md relative text-center border-2 border-stone-400 bg-green-200 dark:bg-green-900"  href={'/confirm'}>{texts.confirmyourmail[lang]}</Link>}
       </div>
-      <div className='w-full p-2 min-h-[300px] sm:ml-0 rounded-md bg-stone-900 sm:w-9/12 '>
+      <div className='w-full p-2 min-h-[300px] sm:ml-0 rounded-md bg-stone-300 dark:bg-stone-900 sm:w-9/12 '>
         {theUser.user.bills.map(
           (item,id) => {
             const a = JSON.parse(item.items);
-            return  <div key={id} className='p-2 bg-stone-950 rounded-md'>
+            return  <div key={id} className='p-2 bg-stone-200 dark:bg-stone-950 rounded-md'>
                       <div className='mb-2' >
                         <b className={`${texts.textdir[lang]}`}>{texts.dop[lang]}:</b> {item. created_at.substring(0,10)}<span className='font-bold ml-2'>{texts.totalprice[lang]}: {item.price}</span>
                       </div>
@@ -61,7 +60,7 @@ export default function Dashboard(){
                     </div>})
         }
       </div>
-    </div>  }             
+    </div>:<p>texts.waitloading["en"]</p>  }             
 </section>
     )
 }

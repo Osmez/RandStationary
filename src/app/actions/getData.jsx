@@ -9,9 +9,9 @@ export async function getUserData(){
         hdrs.append('Accept' ,  'application/json');
       
       
-        const idc = cookies().get('id')?.value;
+        const idc = cookies().get('mainjob')?.value;
         console.log(idc);
-        const urlf = 'http://127.0.0.1:8000/api/dashboard/'+ idc;
+        const urlf = 'http://osmezbase.infy.uk/public/api/dashboard/'+ idc;
         const data = await fetch(urlf, {headers:hdrs,method:"get"}) 
         const jdata = await data.json();
         

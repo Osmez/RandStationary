@@ -76,14 +76,22 @@ export function NavLinks({lang ,setAr, setEn}){
                           key="box"
                       >
                         <button onClick={()=>{setMenuVisible(false)}}>Close</button>
-                        <Link className={`link ${fnt} ${pathname === '/' ? 'text-green-700 border-b-2 border-b-green-700' : ''} font-bold mx-2 p-2`} href="/" style={{lineHeight:"30px"}}>
+                        <Link className={`link ${fnt} ${pathname === '/' ? 'text-green-700 border-b-2 border-b-green-700' : ''} font-bold mx-2 p-2`} 
+                              href="/" 
+                              style={{lineHeight:"30px"}}
+                              onClick={()=>{setMenuVisible(false)}}
+                              >
                           {
                             texts.home[lang]
                           }
                         </Link>
 
                         
-                        <Link className={`link ${fnt} ${pathname === '/login' ? 'text-green-700 border-b-2 border-b-green-700' : ''} font-bold mx-2 p-2`} href="/" style={{lineHeight:"30px"}}>
+                        <Link className={`link ${fnt} ${pathname === '/login' ? 'text-green-700 border-b-2 border-b-green-700' : ''} font-bold mx-2 p-2`} 
+                              href="/login" 
+                              style={{lineHeight:"30px"}}
+                              onClick={()=>{setMenuVisible(false)}}
+                              >
                           {
                             texts.login[lang]
                           }
@@ -91,8 +99,9 @@ export function NavLinks({lang ,setAr, setEn}){
 
                         <Link
                           className={`link ${fnt} ${pathname === '/signup' ? 'text-green-700 border-b-2 border-b-green-700' : ''}font-bold mx-2 p-2`}
-                          href="/about"
+                          href="/signup"
                           style={{lineHeight:"30px"}}
+                          onClick={()=>{setMenuVisible(false)}}
                         >
                                 {
                                   texts.signup[lang]
