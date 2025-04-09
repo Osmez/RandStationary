@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const UsersContext = createContext();
 
 export const UsersProvider = ({ children }) => {
-  const userModel = {user:{user:{name:"username",email:"user mail",phone:"usr phone",bills:"user nills",statis:"null"}
+  const userModel = {user:{user:{name:"username",verified:"n/a",email:"user mail",phone:"usr phone",bills:"user nills",statis:"null"}
   ,bills:[{created_at:"na",price:"n/a",items:'[{"name":"na","price":"na","amounr":"na"}]'}]}
 ,status:"model"}
 

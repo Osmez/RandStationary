@@ -27,9 +27,12 @@ export default function Login(){
     }
     
     useEffect(()=>{
-       if(errorMessage && theUser.user == null){
+       if(errorMessage && theUser.status == 'model'){
+          const us = theUser;
+          us.user.user.email = errorMessage.user;
+          us.user.user.verified = errorMessage.verify;
           
-          addTheUser(errorMessage);
+          addTheUser(us);
           redirect('/dashboard');  
        }
          
