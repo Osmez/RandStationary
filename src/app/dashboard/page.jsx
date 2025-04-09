@@ -22,11 +22,15 @@ export default function Dashboard(){
         if(updated == 'error'){
           er = 'error';
         }else{
-          addTheUser(updated);
+          const us = theUser;
+          us.user = updated.user;
+          us.bills = updated.bills;
+          us.status = updated.status;
+          addTheUser(us);
         }
       }
       
-      if(!Object.hasOwn(theUser.user,"user")){
+      if(theUser.status == "model"){
         updateData();
       }
     }

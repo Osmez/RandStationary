@@ -180,5 +180,8 @@
     },"waitloading":{
        "en":"Please Wait While loading!",
        "ar":"الرجاء الانتظار ,يتم التحميل!"
+    },"plogin":{
+        "en":"Please login to continue!",
+        "ar":"الرجاء تسجيل الدخول للمتابعة!"
     }
 }

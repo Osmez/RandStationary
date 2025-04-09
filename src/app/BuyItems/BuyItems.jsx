@@ -29,8 +29,8 @@ export default function BuyItems({lang, change, isVis}){
                 clearCart();
             }
             setMessage(res.message);
-            setTimeout(()=>{setMessage(null)},2000);
-            subming = false;
+            setTimeout(()=>{setMessage(null)},5000);
+            
         }
         
     }
@@ -53,7 +53,7 @@ export default function BuyItems({lang, change, isVis}){
                         <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{clearCart()}}>{texts.clear[lang]}</button>
                     </div>
                     :''}
-                    {message? <div className='bg-red-500 p-2 text-center'>{message}</div>:''}
+                    {message? <div className={`${message == "success"? 'bg-red-500':'bg-red-500'} p-2 text-center mt-2 rounded-md`}>{texts[message][lang]}</div>:''}
                    
                     </motion.div>
                 ) : null}

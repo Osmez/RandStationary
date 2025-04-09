@@ -4,7 +4,11 @@ import { createContext, useContext, useState } from "react";
 const UsersContext = createContext();
 
 export const UsersProvider = ({ children }) => {
-  const [ theUser, setTheUser ] = useState({});
+  const userModel = {user:{user:{name:"username",email:"user mail",phone:"usr phone",bills:"user nills",statis:"null"}
+  ,bills:[{created_at:"na",price:"n/a",items:'[{"name":"na","price":"na","amounr":"na"}]'}]}
+,status:"model"}
+
+  const [ theUser, setTheUser ] = useState(userModel);
 
   const addTheUser = (user) => {
     setTheUser({user});
@@ -13,7 +17,7 @@ export const UsersProvider = ({ children }) => {
   const getTheUser = ()=> theUser
 
   const clearUsers = () => {
-    setTheUser({});
+    setTheUser(userModel);
   };
 
   return (

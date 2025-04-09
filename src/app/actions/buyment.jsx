@@ -4,6 +4,10 @@ import { cookies } from "next/headers";
 
 
 export async function buyment(Data){
+
+    if(!cookies().has('mainjob')){
+        return JSON.parse('{"message":"plogin"}')
+    }
     
     let byments = '[';
     let totalCost = 0;
