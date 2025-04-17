@@ -1,13 +1,12 @@
 "use client"
-import { NavLinks } from '@/app/ui/nav-links';
+
+import {LanguageContext} from './Context/LanguageContext';
 import RandFooter from '@/app/ui/footer';
 import "./globals.css";
-import { useState } from "react";
-import {LanguageContext} from './Context/LanguageContext';
 import { CartProvider } from './Context/cartContext';
-import { UsersProvider } from './Context/usersContext';
-
-
+import { UserProvider } from './Context/usersContext';
+import { NavLinks } from '@/app/ui/nav-links';
+import { useState } from "react";
 
 export default function RootLayout({children}) {
 
@@ -26,16 +25,14 @@ export default function RootLayout({children}) {
       </head>
       <body className='bg-white dark:bg-stone-700 min-h-screen'>
         <LanguageContext.Provider value={lang}>
-          <UsersProvider>
+          <UserProvider>
             <CartProvider>
               <NavLinks lang={lang} setAr={SetLangAr} setEn={SetLangEn} />  
-
-               {children}
+                {children}
               <RandFooter lng={lang} />
             </CartProvider>
-          </UsersProvider>
+          </UserProvider>
         </LanguageContext.Provider>
-      
       </body> 
     </html>
   );

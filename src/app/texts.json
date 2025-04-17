@@ -41,6 +41,9 @@
     "login":{
         "en":"Login",
         "ar":"تسجيل الدخول"
+    },"logout":{
+        "en":"Log Out",
+        "ar":"تسجيل خؤوج"
     },
     "signup":{
         "en":"Signup",
@@ -177,9 +180,6 @@
     },"desc":{
         "en":"Description",
         "ar":"لوصف"
-    },"waitloading":{
-       "en":"Please Wait While loading!",
-       "ar":"الرجاء الانتظار ,يتم التحميل!"
     },"plogin":{
         "en":"Please login to continue!",
         "ar":"الرجاء تسجيل الدخول للمتابعة!"
