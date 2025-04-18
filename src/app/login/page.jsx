@@ -27,6 +27,7 @@ export default function Login(){
     
   useEffect(()=>{
     if(errorMessage){
+      console.log(errorMessage);
       if(errorMessage.message == 'success'){
         addUser(errorMessage.user);
         redirect('/dashboard');  
