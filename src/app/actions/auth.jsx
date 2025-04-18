@@ -55,7 +55,7 @@ export async function authenticate(state, formData ) {
         case 'CredentialsSignin':
           return {message:'invalid'}
         default:
-          return {message:'error'};
+          return {message:error.message};
       }
     }  
   }
