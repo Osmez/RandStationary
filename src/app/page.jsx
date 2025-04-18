@@ -5,6 +5,7 @@ import RandHeader from './Home/rand-header';
 import Content from './Home/content';
 import { Ubuntu, Lalezar, Mada } from 'next/font/google';
 import { LanguageContext } from './Context/LanguageContext';
+import { useContext } from 'react';
 
 const ub = Ubuntu({
   weight: '400',
