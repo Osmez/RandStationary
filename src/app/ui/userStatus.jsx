@@ -16,7 +16,7 @@ export default function UserStatus({lang, change, isVis, font}){
 
     const { user, removeUser} = useUsers();
 
-    const Logout = ()=>{
+    const Logout = async()=>{
         await LogOut();
         removeUser();
     }
