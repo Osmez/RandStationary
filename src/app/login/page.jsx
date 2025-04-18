@@ -107,7 +107,7 @@ export default function Login(){
             {texts.createacc[lang]}
           </Link>
         </form>
-        <button onClick={handleClick}>Test User</button>
+       
       </div>
     );
 }

@@ -23,15 +23,17 @@ export default function Signup(){
       }
     }
 
-    useEffect(()=>{
-      hasSignd();
-    },[errorMessage,hasSignd]);
-
     const hasSignd = ()=>{
       if(errorMessage == "success"){
         redirect('/login');
       }
     }
+
+    useEffect(()=>{
+      hasSignd();
+    },[errorMessage,hasSignd]);
+
+    
   
     return (
       <section className=' pt-[120px] min-h-screen mb-4'>
