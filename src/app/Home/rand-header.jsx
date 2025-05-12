@@ -3,11 +3,11 @@ import hdrImage from './imgs/heading.png';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import './goldanim.css'; 
-
+import path from 'path';
 
 
 export default function RandHeader({lng, lali, ub, mad}){ 
-
+   
     return(
         
         <header  
@@ -43,7 +43,7 @@ export default function RandHeader({lng, lali, ub, mad}){
                 </div>
                 <div>
                     <h2 style={{fontWeight:900}} className={`w-full text-center sm:text-left  text-[50px] ${ub.className}`}>Rand <br/> Stationery</h2>
-                    <Image className='max-w-60 h-auto m-auto inline-block' src={hdrImage}/>
+                    <Image className='max-w-60 h-auto m-auto inline-block' src={hdrImage} alt={'header image for rand statinery'}/>
                 </div>
             </div>
             :<div className='w-full h-full fixed -z-10 text-center flex flex-col-reverse sm:flex-row-reverse justify-end sm:justify-center'>

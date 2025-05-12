@@ -19,7 +19,7 @@ export default function AddOrPlus({ texts, it, lang }){
   const MinusTheAmount = ()=>{
     minusAmount(it);
   }
-
+  
   const addOrPlus = cartItems.find(cm => cm.name == it.name && cm.amount > 0 ) ;
   let amnt        = cartItems.find(cm => cm.name == it.name? cm.amount:'');
    

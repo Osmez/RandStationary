@@ -1,11 +1,13 @@
 'use client'
 import { AnimatePresence } from 'framer-motion';
 import { motion } from "framer-motion";
-import { buyment } from '@/app/actions/buyment';
-import {  useState } from 'react';
-import { useCart } from '../Context/cartContext';
 import CartItem from '@/app/Cart/CartItem';
-import texts from '@/app/texts.json';
+import texts from '@/app/texts.json'
+import { useCart } from '../Context/cartContext';
+import { RandButton } from '@/app/ui/randbutton';
+import { SaveCart } from '@/app/actions/cartSaver';
+import { useEffect, useState } from 'react';
+import { NotificationMessage } from '@/app/ui/Notifications'
 
 const box={
     borderRadius: "10px",
@@ -13,27 +15,23 @@ const box={
 
 export default function Cart({lang, change, isVis}){
     
-    const { cartItems , clearCart } = useCart();
-    const [ message, setMessage] = useState(null);
-    
-    const hasContent = cartItems.length > 0;
+    const { cartItems , clearCart, addItem } = useCart();
 
-    const ClearBuyments = () => { clearCart(); };
+    const [saved, setSaved] = useState(null);
 
-    const submitBuys = async () =>{
-        
-        if(message == 'wait'){return;}
-        setMessage('wait');
-        const res = await buyment(cartItems);
-        if(res.message){
-            if(res.message  == 'success'){
-                ClearBuyments();
+    const handleClick = async() => {
+       
+        const res = await SaveCart(cartItems);
+        if(res){
+            if(res.state == 'success'){
+                clearCart();
+                setSaved(res);
             }
-            setMessage(res.message);
-            setTimeout(()=>{setMessage(null)},5000);
-            
         }
-        
+    }
+
+    const done = ()=>{
+        setSaved(null);
     }
 
     return(
@@ -48,27 +46,24 @@ export default function Cart({lang, change, isVis}){
                         style={box}
                         key="box"
                     >
-                       
-                    {
-                        hasContent? 
-                            cartItems.map((tm,id) => <CartItem key={id} name={tm.name} amount={tm.amount} total={texts.totalprice[lang]} lang={lang} price={tm.price*tm.amount} />)
-                            :texts.noitems[lang]
-                            }
-                    {
-                        hasContent && message != 'wait' ? 
-                        <div>
-                            <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{submitBuys()}}>{texts.purchase[lang]}</button>
-                            <button className=' p-2 border-2 border-stone-300 rounded-lg dark:bg-slate-500' onClick={()=>{clearCart()}}>{texts.clear[lang]}</button>
-                        </div>
-                        :''
-                    }
-                    {message? <div className={`${message == "success"? 'bg-red-500':'bg-red-500'} p-2 text-center mt-2 rounded-md`}>{texts[message][lang]}</div>:''}
-                   
+                        {cartItems.length == 0 ? <div className='p-2 bg-stone-200 dark:bg-stone-800 rounded-md' dir={texts.dir[lang]}>{texts.noitems[lang]}</div>
+                        :<> 
+                            {cartItems.map((it,id) => <CartItem key={id} name={it.name} amount={it.amount} price={it.price} dir={texts.dir[lang]} />)}
+                            <div className='flex flex-row justify-around'>
+                                <RandButton text={texts.clear[lang]} fun={clearCart}/>
+                                <RandButton text={'send'} fun={()=>{handleClick()}} />
+                            </div>
+                        </>}
+                        {saved? <>
+                            <NotificationMessage state={saved.state} message={texts.purchase[lang]} dire={texts.dir[lang]} />
+                            <NotificationMessage state={saved.state} message={texts.billid[lang]+saved.id} dire={texts.dir[lang]} />
+                            <RandButton text={texts.done[lang]} fun={done} />
+                        </>:''}
                     </motion.div>
                 ) : null}
             </AnimatePresence>
         <motion.button 
-            className={`w-[50px] h-[50px] rounded-md relative text-center mx-2 border-2 border-stone-500 ${cartItems.length > 0 ? 'bg-red-400':''}`} 
+            className={`w-[50px] h-[50px] text-dark dark:text-whaite rounded-md relative text-center mx-2 border-2 border-stone-500 ${cartItems.length > 0 ? 'bg-red-700 text-white':''}`} 
             style={{lineHeight:"50px"}}
             onClick={() => {isVis == 'cart'? change(null):change('cart')}}>
                 {cartItems.length}
@@ -79,6 +74,3 @@ export default function Cart({lang, change, isVis}){
 
     
 }
-
-/*
-isVis == 'cart'? change(null):change('cart')}*/

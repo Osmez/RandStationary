@@ -2,6 +2,9 @@
     "appName":{
         "en":"Rand Stationary",
         "ar":"مكتبة رند"
+    },"ok":{
+        "en":"ok",
+        "ar":"موافق"
     },
     "best":{
         "en":"BEST STATIONERY ITEMS",
@@ -114,7 +117,7 @@
         "ar":"السعر الاجمالي"
     },
     "noitems":{
-        "en":"No Items Yet",
+        "en":"No Items",
         "ar":"لا وجد مشتريات"
     },
     "dir":{
@@ -183,5 +186,53 @@
     },"plogin":{
         "en":"Please login to continue!",
         "ar":"الرجاء تسجيل الدخول للمتابعة!"
+    },"pdftools":{
+        "en":"PDF Tools",
+        "ar":"أدوات PDF"
+    },"mergepdf":{
+        "en":"Merge PDF",
+        "ar":"دمج ملفات PDF"
+    },"breakpdf":{
+        "en":"Break PDF",
+        "ar":"تفريق ملف PDF"
+    },"addfile":{
+        "en":"Add File",
+        "ar":"اضافة ملف"
+    },"addfiles":{
+        "en":"Add Files",
+        "ar":"اضافة ملفات"
+    },"merge":{
+        "en":"Merge",
+        "ar":"دمج"
+    },"break":{
+        "en":"Break",
+        "ar":"تفريق"
+    },"sendcart":{
+        "en":"Send Cart",
+        "ar":"إرسال الفاتورة"
+    },"mergetext":{
+        "en":"Merge multiply PDF files into one file",
+        "ar":"دمج عدة ملفات PDF ضمن ملف واحد"
+    },"breaktext":{
+        "en":"Break PDF file into multiply PDF files",
+        "ar":"تفريق ملف PDF إلى ملف لكل صحة"
+    },"billid":{
+        "en":"Bill ID",
+        "ar":"رمز الفاتورة"
+    },"done":{
+        "en":"Done",
+        "ar":"تم"
+    },"pdftext":{
+        "en":"Merge PDF or Break PDF",
+        "ar":"دمج أو تفرق ملفات PDF"
+    },"selecttomerge":{
+        "en":"Please choose folders to Merge!",
+        "ar":"الرجاء اختيار ملفات لدمجها"
+    },"selecttobreak":{
+        "en":"PLease select file to break!",
+        "ar":"الرجاء اختيار ملف"
+    },"pdfwarn":{
+        "en":"PDF methods handled by the browser you dont have to upload your files, but large PDF files may not work correctly!",
+        "ar":"عمليات الملفات تتم عير المتصفح لست بحاجة لرفع الملفات للموقع ولكن ملفات ألPDF الكبيره قد لاتستطيع التعديل عليها"
     }
 }

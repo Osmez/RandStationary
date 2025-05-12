@@ -67,6 +67,7 @@ const config: Config = {
         "Lobster":['Lobster','sans-serif']
       }
     },
+    
   },
   plugins: [],
 };

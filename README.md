@@ -1,2 +1,1 @@
-# RandStationary
-Website for RandStationary
+RandStationery Website By Osama Namur

@@ -186,7 +186,7 @@
             {
                 "name":"C3",
                 "content":[
-                    {"name":"12 tall","price":20000,"img":"/c3t.png"},
+                    {"name":"12 tall","price":20000,"img":"/items/c3t.png"},
                     {"name":"12 Small","price":5500,"img":"/items/c3short.png"}
                 ]
             },
