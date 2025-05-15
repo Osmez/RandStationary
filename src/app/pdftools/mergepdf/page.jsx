@@ -2,7 +2,7 @@
 
 import React, { useContext, useState } from 'react';
 import SortableList, { SortableItem } from 'react-easy-sort';
-import { Page, Document, pdfjs } from 'react-pdf';
+import { Page, Document , pdfjs  } from 'react-pdf';
 import {arrayMoveImmutable} from "array-move";
 import '../AnnotationLayer.css';
 import '../TextLayer.css';
