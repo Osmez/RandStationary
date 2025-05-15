@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext, useState } from "react";
-import { Page, Document, pdfjs } from 'react-pdf';
+import { Page, Document } from 'react-pdf';
 import { RandSubmit , RandButton } from '@/app/ui/randbutton';
 import '../AnnotationLayer.css';
 import '../TextLayer.css';
@@ -13,8 +13,7 @@ import path from 'path';
 import texts from '@/app/texts.json';
 
 export default function BreakPDF(){
-    pdfjs.GlobalWorkerOptions.workerSrc = path.resolve('../','pdf.worker.min.mjs');
-   
+    
     const lang = useContext(LanguageContext);
    
     return(

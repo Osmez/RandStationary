@@ -2,11 +2,10 @@
 
 import React, { useContext, useState } from 'react';
 import SortableList, { SortableItem } from 'react-easy-sort';
-import { Page, Document , pdfjs  } from 'react-pdf';
+import { Page, Document   } from 'react-pdf';
 import {arrayMoveImmutable} from "array-move";
 import '../AnnotationLayer.css';
 import '../TextLayer.css';
-import {Merger} from './Merger';
 import { RandButton, RandSubmit } from '@/app/ui/randbutton';
 import { LanguageContext } from '../../Context/LanguageContext';
 import {WarningNotify} from '@/app/ui/Notifications';
@@ -14,8 +13,6 @@ import path from 'path';
 import texts from '@/app/texts.json';
 
 export default function MergePDF(){
-
-    pdfjs.GlobalWorkerOptions.workerSrc = path.resolve('../','pdf.worker.min.mjs');
 
     const lang = useContext(LanguageContext);
     const [pageNumber, setPageNumber] = useState(1);
