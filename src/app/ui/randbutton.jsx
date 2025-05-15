@@ -1,4 +1,4 @@
-
+'use client'
 export const RandButton = ({fun, text})=>{
     return(
         <button type="button" onClick={fun} className="p-3 bg-green-800 rounded-md text-white dark:text-black">{text}</button>
