@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext, useState } from "react";
-import { Page, Document } from 'react-pdf';
+
 import { RandSubmit , RandButton } from '@/app/ui/randbutton';
 import '../AnnotationLayer.css';
 import '../TextLayer.css';

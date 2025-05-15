@@ -2,7 +2,6 @@
 
 import React, { useContext, useState } from 'react';
 import SortableList, { SortableItem } from 'react-easy-sort';
-import { Page, Document   } from 'react-pdf';
 import {arrayMoveImmutable} from "array-move";
 import '../AnnotationLayer.css';
 import '../TextLayer.css';
@@ -75,26 +74,7 @@ export default function MergePDF(){
                     <RandButton fun={doMerge} text={texts.merge[lang]} />
                 </div>
             </div>
-            {
-                files.length > 1 ? <SortableList
-                        onSortEnd={onSortEnd}
-                        className="flex flex-wrap place-content-center gap-2 md:gap-4"
-                        draggedItemClassName="opacity-50"
-                    >
-                        {files.map(
-                            (file, i) =>
-                                
-                                <SortableItem key={i}>
-                                    <div className="cursor-grab select-none">
-                                        <Document className={'m-2'} file={file} onLoadSuccess={onDocumentLoadSuccess}>
-                                            <Page scale={0.3} style={{width:'100 px'}} pageNumber={pageNumber} />
-                                        </Document>
-                                    </div>
-                                </SortableItem>
-                                
-                            )}
-                    </SortableList>:''
-            }
+            
                         {notify? <WarningNotify text={texts.selecttomerge[lang]} ><RandButton text={texts.ok[lang]} fun={okNot} /></WarningNotify>:''}
         </section>
     )
