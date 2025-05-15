@@ -95,8 +95,7 @@ export default function MergePDF(){
                             )}
                     </SortableList>:''
             }
-            {merge? <Merger className='w-[90%] h-[90%] fixed bg-green-950 rounded-sm' files={files} reMrg={reMerge} />:''}
-            {notify? <WarningNotify text={texts.selecttomerge[lang]} ><RandButton text={texts.ok[lang]} fun={okNot} /></WarningNotify>:''}
+                        {notify? <WarningNotify text={texts.selecttomerge[lang]} ><RandButton text={texts.ok[lang]} fun={okNot} /></WarningNotify>:''}
         </section>
     )
 }
