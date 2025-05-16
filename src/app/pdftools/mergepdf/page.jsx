@@ -4,7 +4,6 @@ import React, { useContext, useState } from 'react';
 import SortableList, { SortableItem } from 'react-easy-sort';
 import {arrayMoveImmutable} from "array-move";
 import { getDocument, GlobalWorkerOptions } from "pdfjs-dist";
-import path from 'path';
 GlobalWorkerOptions.workerSrc = path.resolve('../','pdf.worker.js');
 import '../AnnotationLayer.css';
 import '../TextLayer.css';
