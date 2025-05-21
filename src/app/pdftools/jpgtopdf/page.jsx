@@ -10,7 +10,7 @@ import LeftSideMargin from "../components/Image/LeftSideBoxButtons/LeftSideMargi
 import texts from '../../texts.json';
 import {LanguageContext} from '../../Context/LanguageContext';
 
-export default function jpgtopdf() {
+export default function Jpgtopdf() {
 
     const lang = useContext(LanguageContext);
 
