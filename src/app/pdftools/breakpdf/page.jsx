@@ -33,7 +33,7 @@ export default function BreakPDF(){
     return(
         <section className="w-full min-h-screen">
             <div className="w-full h-[150px]"></div>
-           <div dir={texts.dir[lang]} className=" bg-stone-700 flex justify-start items-center py-3 flex-row-reverse  rounded-md m-auto w-4/5  md:flex-row flex-wrap">
+           <div dir={texts.dir[lang]} className=" bg-stone-200 dark:bg-stone-700 flex justify-start items-center py-3 flex-row-reverse  rounded-md m-auto w-4/5  md:flex-row flex-wrap">
                 {!theFile? <FileUpload onFileChange={OnChange} lang={lang} />:<div className="m-auto"><FileView file={theFile} /><RandButton text={texts.clear[lang]} fun={()=>{setTheFile(null);setPages([])}} /></div>} 
                 <div className="p-3 m-2 text-center md:text-start">
                     <h3 className="text-4xl font-bold">{texts.breakpdf[lang]}</h3>
