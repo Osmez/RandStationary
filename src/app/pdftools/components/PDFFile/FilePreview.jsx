@@ -5,7 +5,7 @@ export default function FilePreview({ file, FilePreviewExtra }) {
   const [deleted, setDeleted] = useState(false);
 
   const fileThumbnailRef = React.createRef();
-  const PDFThumbnail = React.forwardRef(({ src, deg }, ref) => {
+  const PDFThumbnail = React.forwardRef(function thumb({ src, deg }, ref){
     const gettd = async()=>{
       if (src.image) {
         ref.current.classList.remove(styles.rotating);
