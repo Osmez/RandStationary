@@ -4,7 +4,7 @@ export default function ImagePreview({ image, ImagePreviewExtra }) {
   const [deleted, setDeleted] = useState(false);
 
   const imageThumbnailRef = React.createRef();
-  const ImageThumbnail = React.forwardRef(function thumb({ src, deg }, ref){
+  const ImageThumbnail = React.forwardRef(function Thumb({ src, deg }, ref){
     let TYPED_ARRAY = new Uint8Array(src);
     let STRING_CHAR;
     try {
