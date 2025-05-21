@@ -58,7 +58,7 @@ export default function MergePDF(){
     return(
         <section className="w-full min-h-screen">
             <div className='w-full h-[150px]'></div>
-            <div dir={texts.dir[lang]} className='w-3/4 min-h-[180px] p-2 m-auto rounded-md bg-stone-700 flex flex-row flex-wrap justify-start'>
+            <div dir={texts.dir[lang]} className='w-3/4 min-h-[180px] p-2 m-auto rounded-md bg-stone-200 dark:bg-stone-700 flex flex-row flex-wrap justify-start'>
                 {files.length < 1? <><FileUpload onFileChange={onFileChange} multiple={true} lang={lang} />
                     
                 </>:<div className='w-[80px] h-[220px] flex justify-center items-center'><PDFIcon /></div>}
