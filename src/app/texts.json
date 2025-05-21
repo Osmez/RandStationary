@@ -234,5 +234,91 @@
     },"pdfwarn":{
         "en":"PDF methods handled by the browser you dont have to upload your files, but large PDF files may not work correctly!",
         "ar":"عمليات الملفات تتم عير المتصفح لست بحاجة لرفع الملفات للموقع ولكن ملفات ألPDF الكبيره قد لاتستطيع التعديل عليها"
+    },"address":{
+        "en":"Address",
+        "ar":"العنوان"
+    },"location":{
+        "en":"Lattakia - Alqanjara - Alqosor Street",
+        "ar":"اللاذقية - القنجرة - حي القصور"
+    },"choosefile":{
+        "en":"Choose File",
+        "ar":"اختر ملف"
+    },"ordrop":{
+        "en":"Or Drop Files(s)",
+        "ar":"أو مرر ملف/ملفات"
+    },"saveasindividual":{
+        "en":"Save as Indiviu"
+    },"pagecount":{
+        "en":"Pages",
+        "ar":"عدد الصفحات"
+    },"addpagenumber":{
+        "en":"Add Page Numbers to PDF",
+        "ar":"اضافة ارقام الصفحات لملف PDF"
+    },"addpagenumbertext":{
+        "en":"Add the number of every page and chooset the size and the position",
+        "ar":" اضافة ارقام الصفحات لملف الPDF مع اختيار مكان الرقم وحجمه"
+    },"saveanddownload":{
+        "en":"Save and Download",
+        "ar":"حفظ وتحميل"
+    },"margin":{
+        "en":"Margin",
+        "ar":"الهوامش"
+    },"startingpage":{
+        "en":"Starting Page",
+        "ar":"صفحة البداية"
+    },"endingpage":{
+        "en":"Ending Page",
+        "ar":"صفحة النهاية"
+    },"firstnumber":{
+        "en":"First Number",
+        "ar":"رقم البداية"
+    },"fontsize":{
+        "en":"Font Size",
+        "ar":"حجم الخط"
+    },"pagenumberoptions":{
+        "en":"Page Number Options",
+        "ar":"خيارات أضافة القم"
+    },"position":{
+        "en":"Position",
+        "ar":"الموقع"
+    },"imagestopdf":{
+        "en":"Images to Pdf",
+        "ar":"تحويل صور لملف PDF"
+    },"saveasmerged":{
+        "en":"Save as merged file",
+        "ar":"دمج وحفظ كملف PDF"
+    },"jpgtopdftext":{
+        "en":"Merge multi images and save as PDF",
+        "ar":"دمج عدة صور وحفظ كملف PDF"
+    },"marginsettings":{
+        "en":"Margin Settings",
+        "ar":"خصائص الهوامش"
+    },"top":{
+        "en":"Top",
+        "ar":"أعلى"
+    },"right":{
+        "en":"Right",
+        "ar":"يمين"
+    },"left":{
+        "en":"Left",
+        "ar":"يسار"
+    },"bottom":{
+        "en":"Bottom",
+        "ar":"أسفل"
+    },"pagesettings":{
+        "en":"Page Settings",
+        "ar":"خصائص الصفحة"
+    },"size":{
+        "en":"Size",
+        "ar":"الحجم"
+    },"orientation":{
+        "en":"Orientation",
+        "ar":"الاتجاه"
+    },"imagepos":{
+        "en":"Image Position",
+        "ar":"موقع الصورة"
+    },"deletefiles":{
+        "en":"Delete Files",
+        "ar":"حذف الملفات"
     }
 }
