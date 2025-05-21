@@ -1,3 +1,4 @@
+'use client'
 import React,{useContext} from "react";
 import texts from '../../../../texts.json';
 import {LanguageContext} from '../../../../Context/LanguageContext';
