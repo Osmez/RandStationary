@@ -7,7 +7,7 @@ import FileRotateButtons from './components/PDFFile/FilePreviewButtons/FileRotat
 export default function FileView({file, extra , pagec}){
   
   const fileThumbnailRef = React.createRef();
-  const PDFThumbnail = React.forwardRef(function thumb({ src, deg }, ref){
+  const PDFThumbnail = React.forwardRef(function Thumb({ src, deg }, ref){
   const getyr = async()=>{
     if (src.image) {
       
