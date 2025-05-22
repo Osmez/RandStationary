@@ -39,7 +39,7 @@ export default function Content({lng, ub, mad}){
        />
 
        <div className="bg-white dark:bg-stone-800 p-2">
-         <div className='w-4/5 h-[300px] p-2 m-auto bg-stone-200 dark:bg-stone-700 rounded-md flex flex-row justify-center items-center' dir={texts.dir[lng]}>
+         <div className='w-4/5 min-h-[300px] h-fit p-2 m-auto bg-stone-200 dark:bg-stone-700 rounded-md flex flex-row justify-center items-center' dir={texts.dir[lng]}>
             <div  className='w-2/3 h-full flex flex-col justify-center items-center text-center text-4xl'>
               <h3 className={`${lng == "en" ? ub.className : mad.className}`} dir={texts.dir[lng]}>{texts.pdftools[lng]}</h3>
               <h3 className={`text-2xl ${lng == "en" ? ub.className : mad.className}`} dir={texts.dir[lng]}>{texts.pdftext[lng]}</h3>
