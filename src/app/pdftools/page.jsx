@@ -32,7 +32,7 @@ export default function PDFTools(){
                 <Link className='p-4 m-2 rounded-md text-center bg-green-700 text-white dark:text-black' href={'/pdftools/addpagesnumber'} >
                     {texts.addpagenumber[lang]}
                 </Link>
-                <Link className='p-4 m-2 rounded-md text-center bg-green-700 text-white dark:text-black' href={'/pdftools/addpagesnumber'} >
+                <Link className='p-4 m-2 rounded-md text-center bg-green-700 text-white dark:text-black' href={'/pdftools/jpgtopdf'} >
                     {texts.imagestopdf[lang]}
                 </Link>
 
